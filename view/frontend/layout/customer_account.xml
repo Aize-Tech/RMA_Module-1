@@ -10,11 +10,7 @@
                     <argument name="sortOrder" xsi:type="number">220</argument>
                 </arguments>
             </block>
-
             <referenceBlock name="customer-account-navigation-newsletter-subscriptions-link" remove="true"/>
-
-
-
         </referenceBlock>
     </body>
 </page>
