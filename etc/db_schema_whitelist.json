@@ -1,0 +1,17 @@
+{
+    "rma_request": {
+        "column": {
+            "entity_id": true,
+            "order_id": true,
+            "reason": true,
+            "created_at": true,
+            "updated_at": true,
+            "order_item_id": true,
+            "quantity": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "RMA_REQUEST_ORDER_ID_SALES_ORDER_ENTITY_ID": true
+        }
+    }
+}
