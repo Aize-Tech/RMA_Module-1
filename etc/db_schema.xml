@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="rma_request" resource="default" engine="innodb" comment="RMA Request Table">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="int" name="order_id" padding="10" unsigned="true" nullable="false" comment="Order ID"/>
+        <column xsi:type="int" name="order_item_id" padding="10" unsigned="true" nullable="false" comment="Order Item ID"/>
+        <column xsi:type="decimal" name="quantity" precision="12" scale="4" unsigned="false" nullable="false" comment="Quantity"/>
+        <column xsi:type="text" name="reason" nullable="false" comment="Reason"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="RMA_REQUEST_ORDER_ID_SALES_ORDER_ENTITY_ID" table="rma_request" column="order_id" referenceTable="sales_order" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+</schema>

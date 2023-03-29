@@ -1,11 +1,12 @@
 <?php
-namespace Aize\Rma\Controller\Index;
+
+namespace Aize\Rma\Controller\Customer;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-class View extends Action
+class Request extends Action
 {
     protected $resultPageFactory;
 
@@ -20,7 +21,7 @@ class View extends Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->set(__('RMA History'));
+        $resultPage->getConfig()->getTitle()->set(__('RMA Request'));
         return $resultPage;
     }
 }
